@@ -1,0 +1,7 @@
+ <resources>
+    <string name="app_name">Final_Project</string>
+    <string name="action_settings">Settings</string>
+     <string name="let_s_start_tracking_your_physical_activity">Let\'s start tracking your physical activity!</string>
+     <string name="welcome">Welcome</string>
+     <string name="enter_your_physical_activity">Enter your physical activity</string>
+ </resources>
