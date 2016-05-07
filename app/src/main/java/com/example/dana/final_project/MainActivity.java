@@ -10,7 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+/**
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * Tab code/layout source http://javapapers.com/android/android-tab-layout-tutorial/
 
+ * A placeholder fragment containing a simple view.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

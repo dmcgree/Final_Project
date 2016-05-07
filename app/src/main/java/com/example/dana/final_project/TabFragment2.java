@@ -1,7 +1,10 @@
 package com.example.dana.final_project;
 
 /**
- * Created by Dana on 4/29/2016.
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * Tab code/layout source http://javapapers.com/android/android-tab-layout-tutorial/
+
+ * A placeholder fragment containing a simple view.
  */
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

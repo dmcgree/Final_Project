@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * Tab code/layout source http://javapapers.com/android/android-tab-layout-tutorial/
+
  * A placeholder fragment containing a simple view.
  */
 public class TabFragment1 extends Fragment {

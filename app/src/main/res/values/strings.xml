@@ -4,4 +4,12 @@
      <string name="let_s_start_tracking_your_physical_activity">Let\'s start tracking your physical activity!</string>
      <string name="welcome">Welcome</string>
      <string name="enter_your_physical_activity">Enter your physical activity</string>
+     <string name="id_string">Activity ID</string>
+     <string name="activity_string">Activity Name</string>
+     <string name="add_string">ADD</string>
+     <string name="find_string">FIND</string>
+     <string name="delete_string">DELETE</string>
+     <string name="instructions">instructions</string>
+     <string name="enter_your_activity">Enter your activity</string>
+
  </resources>
