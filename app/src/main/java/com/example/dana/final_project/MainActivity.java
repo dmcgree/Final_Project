@@ -1,5 +1,7 @@
 package com.example.dana.final_project;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("Welcome"));
         tabLayout.addTab(tabLayout.newTab().setText("Weight"));
-        tabLayout.addTab(tabLayout.newTab().setText("Recipes"));
+        tabLayout.addTab(tabLayout.newTab().setText("Recipies"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -68,5 +70,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    public void browser1 (View view) {
+
+        setContentView(R.layout.web);
+
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        startActivity(browserIntent);
     }
 }
