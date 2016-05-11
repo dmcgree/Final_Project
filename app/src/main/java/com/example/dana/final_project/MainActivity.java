@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+
 /**
  * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
  * Tab code/layout based on http://javapapers.com/android/android-tab-layout-tutorial/
@@ -97,13 +99,28 @@ public class MainActivity extends AppCompatActivity {
 //share results based on information from this site https://androidsolved.wordpress.com/2015/07/22/share-option-or-button-implementation-example-in-android-using-android-studio/
     public void shareIt (View view) {
 
-        //sharing implementation here
-        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-        sharingIntent.setType("text/plain");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Results");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Now Learn Android with AndroidSolved clicke here to visit https://androidsolved.wordpress.com/ ");
-        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        //Get the selected text
+        EditText et=(EditText)findViewById(R.id.message);
+        int startSelection=et.getSelectionStart();
+        int endSelection=et.getSelectionEnd();
+        String selectedText = et.getText().toString().substring(startSelection, endSelection);
+
+        //if no text is selected share the entire text area.
+        if(selectedText.length() == 0){
+            EditText message = (EditText) findViewById(R.id.message);
+            String dataToShare = message.getText().toString();
+            selectedText = dataToShare;
+        }
+
+        //Share the text
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, selectedText);
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
+
     }
+
 
 }
 
