@@ -21,7 +21,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+/**
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * DB code/layout based on https://github.com/wshuman3/weighttracker
 
+ * A placeholder fragment containing a simple view.
+ */
 public class Utility {
 	
 	/**

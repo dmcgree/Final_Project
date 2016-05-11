@@ -1,3 +1,10 @@
+/**
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * DB code/layout based on https://github.com/wshuman3/weighttracker
+
+ * A placeholder fragment containing a simple view.
+ */
+
 package com.example.dana.final_project;
 
 import android.content.Context;

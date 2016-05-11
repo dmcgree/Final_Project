@@ -14,10 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 /**
  * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
- * Tab code/layout source http://javapapers.com/android/android-tab-layout-tutorial/
-
- * A placeholder fragment containing a simple view.
+ * Tab code/layout based on http://javapapers.com/android/android-tab-layout-tutorial/
  */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Welcome"));
         tabLayout.addTab(tabLayout.newTab().setText("Weight"));
         tabLayout.addTab(tabLayout.newTab().setText("Recipies"));
+        tabLayout.addTab(tabLayout.newTab().setText("Results"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
@@ -73,12 +73,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+// open recipe website links based on various Google searches and code from Master Detail assignment
     public void browser1 (View view) {
 
-        setContentView(R.layout.web);
-
-        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://allrecipes.com/recipes/84/healthy-recipes/"));
         startActivity(browserIntent);
     }
+    public void browser2 (View view) {
+
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.foodnetwork.com/healthy.html"));
+        startActivity(browserIntent);
+    }
+    public void browser3 (View view) {
+
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.cookinglight.com/food/quick-healthy-recipes"));
+        startActivity(browserIntent);
+    }
+    public void browser4 (View view) {
+
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.eatingwell.com/"));
+        startActivity(browserIntent);
+    }
+//share results based on information from this site https://androidsolved.wordpress.com/2015/07/22/share-option-or-button-implementation-example-in-android-using-android-studio/
+    public void shareIt (View view) {
+
+        //sharing implementation here
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "My Results");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Now Learn Android with AndroidSolved clicke here to visit https://androidsolved.wordpress.com/ ");
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+
 }
+

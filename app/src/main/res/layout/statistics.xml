@@ -1,0 +1,374 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <TableLayout
+        android:id="@+id/LatestWeighInsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1,2" >
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/DailyChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/Day"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/DailyChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/WeekChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/Week"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/WeekChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/TwoWeekChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/TwoWeek"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/TwoWeekChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/MonthChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/Month"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/MonthChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/TwoMonthChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/TwoMonths"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/TwoMonthChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/ThreeMonthChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/ThreeMonths"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/ThreeMonthChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/SixMonthChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/SixMonths"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/SixMonthChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#99777777" >
+        </LinearLayout>
+
+        <TableRow
+            android:id="@+id/WeightChange7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="2dp" >
+
+            <TextView
+                android:id="@+id/TotalChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:paddingBottom="7dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="2dp"
+                android:text="@string/Total"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/TotalChangeResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:paddingBottom="7dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="visible" >
+            </TextView>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Share it"
+        android:textSize="20sp"
+        android:id="@+id/shareit"
+        android:textColor="#FFFFFF"
+        android:background="#4169E1"
+        android:layout_marginTop="40dp"
+        android:typeface="serif"
+        android:onClick="shareIt"/>
+
+</LinearLayout>

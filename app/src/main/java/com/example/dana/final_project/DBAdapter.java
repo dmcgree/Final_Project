@@ -10,9 +10,14 @@ import android.util.Log;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+/**
+ * Created by Dana McGree, Ashley Stalvig, Ted Jacobi on 4/29/2016.
+ * DB code/layout based on https://github.com/wshuman3/weighttracker
 
+ * A placeholder fragment containing a simple view.
+ */
 public class DBAdapter {
-
+//declare table name and columns
 	public static final String KEY_ROWID = "_id";
     public static final String KEY_WEIGHT = "weight";
     public static final String KEY_DATE = "date";
@@ -22,6 +27,7 @@ public class DBAdapter {
     private static final String DATABASE_TABLE = "weights";
     private static final int DATABASE_VERSION = 2;
 
+    //create table
     private static final String DATABASE_CREATE =
         "create table weights (" +
         "_id integer primary key autoincrement, " +
